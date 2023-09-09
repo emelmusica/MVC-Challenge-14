@@ -12,3 +12,11 @@ router.get("/", async (req, res) => {
 });
 
 // Get a specific category by ID
+router.get("/:id", async (req, res) => {
+    try {
+        const categoryData = await Category.findByPk(req.params.id);
+        if (!categoryData) {
+            return res
+            .status(404)
+            .json){ message: "no category found with this ID"});
+        }
