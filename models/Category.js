@@ -5,3 +5,4 @@ class Category extends Model {}
 
 // create category management code
 
+Category.init()
