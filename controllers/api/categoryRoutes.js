@@ -20,3 +20,11 @@ router.get("/:id", async (req, res) => {
             .status(404)
             .json){ message: "no category found with this ID"});
         }
+        res.status(200).json(categoryData);
+    } catch (error) {
+        console.error('Error fetching category with ID ${req.params.id}:',error);
+        res.status(500).json(error);
+    }
+});
+
+module.exports = router;
