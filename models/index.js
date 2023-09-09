@@ -11,4 +11,4 @@ const User = require("./User");
 //   onDelete: "CASCADE",
 // });
 
-module.exports = { , Category, User };
+module.exports = { Category, User };
