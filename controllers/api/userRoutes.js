@@ -4,3 +4,5 @@ const { User } = require("../../models");
 // get userData test
 
 // login post request
+
+// post request logout
