@@ -1,0 +1,43 @@
+<body>
+    <div class="container p-5">
+        <div class="row justify-content-start align-items-center pb-5">
+            <div class="col-md-6 text-white">
+                <h1>Login</h1>
+                <form class="login-form" id="email-login-form">
+                    <div class="form-group">
+                        <label for="email-login">Email</label>
+                        <input type="email" class="form-control" id="email-login" name="email-login" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password-login">Password</label>
+                        <input type="password" class="form-control" id="password-login" name="password" required>
+                    </div>
+                    <button type="submit" class="btn btn-dark">Login</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="row justify-content-start align-items-center">
+            <div class="col-md-6 text-white">
+                <h1 class="pb-4">If not registered yet, sign up here:</h1>
+                <form class="signup-form" id="signup-form">
+                    <div class="form-group">
+                        <label for="signup-name">Name</label>
+                        <input type="text" class="form-control" id="signup-name" name="signup-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-email">Email</label>
+                        <input type="email" class="form-control" id="signup-email" name="signup-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-password">Password</label>
+                        <input type="password" class="form-control" id="signup-password" name="signup-password"
+                            required>
+                    </div>
+                    <button type="submit" class="btn btn-dark">Sign Up</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="./js/login.js"></script>
+</body>
