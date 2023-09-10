@@ -31,13 +31,13 @@ const sess = {
 
 app.use(session(sess));
 
-// Set up the route to render the login form
-app.get("/login", (req, res) => {
-  // Render the loginForm.handlebars view from the "partials" directory
-  res.render("partials/loginForm");
-});
+// // Set up the route to render the login form
+// app.get("/login", (req, res) => {
+//   // Render the loginForm.handlebars view from the "partials" directory
+//   res.render("partials/loginForm");
+// });
 
-app.use(routes);
+// app.use(routes);
 
 // View engine setup
 app.engine(
