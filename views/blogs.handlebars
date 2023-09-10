@@ -1,0 +1,16 @@
+<div class="container p-5 m-3">
+    <div class="row justify-content-center align-items-center" style="height: 100vh;">
+        {{#each blogPostData}}
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card text-white bg-dark">
+                <a href="/blogRoutes/{{id}}">
+                    <img src="{{image}}" class="card-img-top" alt="{{title}}" style="height: 300px;">
+                </a>
+                <div class="card-body text-center">
+                    <h5 class="card-title">{{title}}</h5>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>
