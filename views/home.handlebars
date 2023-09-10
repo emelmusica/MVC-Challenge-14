@@ -1,5 +1,23 @@
 <!-- Hero -->
-<section class="hero text-center bg-black text-white">
+<style>
+    .hero {
+        background-color: black;
+        color: black;
+        transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out, padding 0.2s ease-in-out;
+    }
+
+    .hero:hover {
+        background-color: #f0f0f0; /* Slight grey background on hover */
+        transform: scale(1.02); /* Slight scaling on hover */
+        padding: 2rem; /* Adjust padding to maintain size */
+    }
+
+    .hero:hover .btn {
+        background-color: transparent; /* Remove button background on hover */
+    }
+</style>
+
+<section class="hero text-center">
     <div class="hero-bg">
         <img src="https://img.freepik.com/premium-photo/banner-pets-bengal-cat-labrador-retriever-dog-hide-blank-isolated-white-background_77749-755.jpg?w=900"
             alt="Developer Community" class="img-fluid">
