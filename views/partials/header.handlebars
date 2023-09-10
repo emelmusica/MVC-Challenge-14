@@ -1,41 +1,40 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+<nav class="navbar navbar-expand-lg navbar-light bg-white">
 
     <!-- Navbar content -->
 
     <div class="container">
         <ul class="navbar-nav flex-column flex-md-row w-100">
             <li class="nav-item flex-grow-1 text-center">
-                <a class="nav-link text-white border border-white rounded px-4 py-2 transition-border" href="/">Home</a>
+                <a class="nav-link text-black border border-black rounded px-4 py-2 transition-border" href="/">Home</a>
             </li>
             <li class="nav-item flex-grow-1 text-center">
-                <a class="nav-link text-white border border-white rounded px-4 py-2 transition-border"
+                <a class="nav-link text-black border border-black rounded px-4 py-2 transition-border"
                     href="/about">About</a>
             </li>
             <li class="nav-item flex-grow-1 text-center">
-                <a class="nav-link text-white border border-white rounded px-4 py-2 transition-border"
+                <a class="nav-link text-black border border-black rounded px-4 py-2 transition-border"
                     href="/contact">Contact</a>
             </li>
             {{#if logged_in}}
             <li class="nav-item flex-grow-1 text-center">
-                <a class="nav-link text-white border border-white rounded px-4 py-2 transition-border" id="logout-link"
+                <a class="nav-link text-black border border-black rounded px-4 py-2 transition-border" id="logout-link"
                     href="/">Logout</a>
             </li>
             {{else}}
             <li class="nav-item flex-grow-1 text-center">
-                <a class="nav-link text-white border border-white rounded px-4 py-2 transition-border"
+                <a class="nav-link text-black border border-black rounded px-4 py-2 transition-border"
                     href="/login">Login</a>
             </li>
             {{/if}}
         </ul>
     </div>
 
-    <!-- Add this style to enhance the hover and focus effect -->
+    <!-- hover and focus effect -->
     <style>
         .transition-border:hover,
         .transition-border:focus {
             border-width: 3px !important;
             padding: calc(0.5rem - 1px) calc(1rem - 1px) !important;
-            /* Adjusting padding to maintain size */
         }
     </style>
 
