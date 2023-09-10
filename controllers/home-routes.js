@@ -21,7 +21,7 @@ router.get("/login", async (req, res) => {
   }
 });
 
-router.get("/", async (req, res) => {
+router.get("/post-blog", async (req, res) => {
   return res.render("postBlog", { logged_in: req.session.logged_in });
 });
 
