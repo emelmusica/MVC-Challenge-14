@@ -19,10 +19,12 @@ const loginFormHandler = async (event) => {
       console.log("API Response:", response);
 
       if (response.ok) {
-        console.log(response.statusText);
+        console.log("Login successful");
         document.location.replace("/");
       } else {
-        alert(response.statusText);
+        console.error("Login failed with status:", response.status);
+        const errorMessage = await response.text();
+        alert(`Login Error: ${errorMessage}`);
       }
     } catch (error) {
       console.error("There was an error:", error);
@@ -48,10 +50,13 @@ const signupFormHandler = async (event) => {
     });
 
     if (response.ok) {
+      console.log("Signup successful");
       // If successful, redirect the browser to the home page
       document.location.replace("/");
     } else {
-      alert(response.statusText);
+      console.error("Signup failed with status:", response.status);
+      const errorMessage = await response.text();
+      alert(`Signup Error: ${errorMessage}`);
     }
   } catch (error) {
     console.error("There was an error during the signup process:", error);

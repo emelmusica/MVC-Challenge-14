@@ -22,7 +22,7 @@ router.get("/login", async (req, res) => {
 });
 
 router.get("/", async (req, res) => {
-  return res.render("postAdoption", { logged_in: req.session.logged_in });
+  return res.render("postBlog", { logged_in: req.session.logged_in });
 });
 
 router.get("/contact", async (req, res) => {
@@ -54,7 +54,7 @@ router.get("/", async (req, res) => {
       logged_in: req.session.logged_in,
     });
   } catch (error) {
-    console.error("Error fetching pet data:", error);
+    console.error("Error fetching data:", error);
     res.status(500).json(error);
   }
 });
