@@ -1,22 +1,4 @@
 <!-- Hero -->
-<style>
-    .hero {
-        background-color: black;
-        color: black;
-        transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out, padding 0.2s ease-in-out;
-    }
-
-    .hero:hover {
-        background-color: #f0f0f0; /* Slight grey background on hover */
-        transform: scale(1.02); /* Slight scaling on hover */
-        padding: 2rem; /* Adjust padding to maintain size */
-    }
-
-    .hero:hover .btn {
-        background-color: transparent; /* Remove button background on hover */
-    }
-</style>
-
 <section class="hero text-center">
     <div class="hero-bg">
         <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.impactplus.com%2Fblog%2Fbest-blog-header-design-examples&psig=AOvVaw19EqLvOM9EqTFbqnFqzlUW&ust=1694411551994000&source=images&cd=vfe&opi=89978449&ved=0CA8QjRxqFwoTCPj7zoitn4EDFQAAAAAdAAAAABAE"
@@ -25,11 +7,23 @@
     <div class="hero-content">
         <h1>Welcome to Our Developer Community!</h1>
         <p>Join our community and share your knowledge.</p>
-        <a class="btn btn-outline-light btn-lg" href="/blog">Explore Blogs</a>
-        <a class="btn btn-outline-light btn-lg" href="/create-post">Publish Your Post</a>
+        <a class="btn btn-outline-dark btn-lg btn-expand" href="/blog">Explore Blogs</a>
+        <a class="btn btn-outline-dark btn-lg btn-expand" href="/create-post">Publish Your Post</a>
     </div>
 </section>
 
+<style>
+    .btn-expand {
+        color: black; /* Text color always black */
+        transition: transform 0.2s ease-in-out, padding 0.2s ease-in-out;
+        background-color: transparent !important; /* Remove button background */
+    }
+
+    .btn-expand:hover {
+        transform: scale(1.02); /* Slight scaling on hover */
+        padding: 0.75rem 1rem; /* Adjust padding to maintain size */
+    }
+</style>
 
 <main class="container">
     <div class="row justify-content-center">
