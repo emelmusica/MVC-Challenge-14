@@ -44,6 +44,10 @@ app.get("/", (req, res) => {
   res.render("home");
 });
 
+app.use('/posts', postRoutes);
+
+app.use('/comment', commentRoutes);
+
 
 app.use(routes);
 
