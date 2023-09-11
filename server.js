@@ -10,7 +10,7 @@ const { Sequelize } = require('sequelize');
 require('dotenv').config();
 
 
-const sequelize = new Sequelize(process.env.DATABASE_URL, {
+const sequelize = new Sequelize(process.env.DATABASE_URL || 'mysql://root:Abcdefg1!@localhost:3306/blogsite_db', {
   dialect: 'mysql',
 });
 
