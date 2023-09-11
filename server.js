@@ -31,11 +31,18 @@ const sess = {
 
 app.use(session(sess));
 
-// Set up the route to render the login form
 app.get("/login", (req, res) => {
-  // Render the loginForm.handlebars view from the "partials" directory
   res.render("partials/loginForm");
 });
+
+app.get("/signUp", (req, res) => {
+  res.render("partials/signUp");
+});
+
+app.get("/", (req, res) => {
+  res.render("home");
+});
+
 
 app.use(routes);
 

@@ -1,24 +1,29 @@
+
 <div class="row justify-content-start align-items-center">
-            <div class="col-md-6 text-black">
-                <h1 class="pb-4">If not registered yet, sign up here:</h1>
-                <form class="signup-form" id="signup-form">
-                    <div class="form-group">
-                        <label for="signup-name">Name</label>
-                        <input type="text" class="form-control" id="signup-name" name="signup-name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="signup-email">Email</label>
-                        <input type="email" class="form-control" id="signup-email" name="signup-email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="signup-password">Password</label>
-                        <input type="password" class="form-control" id="signup-password" name="signup-password"
-                            required>
-                    </div>
-                    <button type="submit" class="btn btn-dark">Sign Up</button>
-                </form>
+    <div class="col-md-6 text-black">
+        <h1 class="pb-4">If not registered yet, sign up here:</h1>
+        <form class="signup-form" id="signup-form">
+            <div class="form-group">
+                <label for="signup-name">Name</label>
+                <input type="text" class="form-control" id="signup-name" name="signup-name" required>
             </div>
-        </div>
+            <div class="form-group">
+                <label for="signup-email">Email</label>
+                <input type="email" class="form-control" id="signup-email" name="signup-email" required>
+            </div>
+            <!-- Add id="username-signup" to this input field -->
+            <div class="form-group">
+                <label for="signup-username">Username</label>
+                <input type="text" class="form-control" id="username-signup" name="signup-username" required>
+            </div>
+            <div class="form-group">
+                <label for="signup-password">Password</label>
+                <input type="password" class="form-control" id="signup-password" name="signup-password" required>
+            </div>
+            <button type="submit" class="btn btn-dark">Sign Up</button>
+        </form>
     </div>
-    <script src="public/js/signUp.js"></script>
-</body>
+</div>
+
+<script src="/js/signUp.js"></script>
+
