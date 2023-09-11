@@ -48,6 +48,7 @@ app.use('/posts', postRoutes);
 
 app.use('/comment', commentRoutes);
 
+app.use('/user', userRoutes);
 
 app.use(routes);
 
