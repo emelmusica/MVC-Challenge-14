@@ -1,23 +1,17 @@
-const Sequelize = require('sequelize');
+const Sequelize = require("sequelize");
+const Category = require("./Category");
+const User = require("./User");
 
-// Assuming you have the DATABASE_URL environment variable set
+
 const sequelize = new Sequelize(process.env.DATABASE_URL, {
-  dialect: 'postgres', // or your database dialect
-  // other options...
 });
 
-// Test the database connection
-sequelize
-  .authenticate()
-  .then(() => {
-    console.log('Database connection has been established successfully.');
-  })
-  .catch((err) => {
-    console.error('Unable to connect to the database:', err);
-  });
 
-// Import your models and define associations here
+Category.init(sequelize, Sequelize);
+User.init(sequelize, Sequelize);
 
-module.exports = {
-  sequelize, // Export the Sequelize instance for use in your app
-};
+
+Category.hasMany(User);
+User.belongsTo(Category);
+
+module.exports = { sequelize, Category, User };
