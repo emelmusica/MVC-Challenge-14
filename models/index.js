@@ -1,5 +1,4 @@
 const Sequelize = require("sequelize");
-const Category = require("./Category");
 const User = require("./user");
 const Post = require("./post");
 const Comment = require("./comment");
