@@ -8,7 +8,6 @@ const sequelize = new Sequelize(process.env.DATABASE_URL, {
   dialect: 'postgres',
 });
 
-Category.init(sequelize, Sequelize);
 User.init(sequelize, Sequelize);
 Post.init(sequelize, Sequelize);
 Comment.init(sequelize, Sequelize);
@@ -22,4 +21,4 @@ Comment.belongsTo(Post); // Each comment belongs to a post
 Comment.belongsTo(User); // Each comment belongs to a user
 User.hasMany(Comment);   // Each user can have multiple comments
 
-module.exports = { sequelize, Category, User, Post, Comment };
+module.exports = { sequelize, User, Post, Comment };
