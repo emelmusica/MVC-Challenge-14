@@ -7,12 +7,6 @@ const PORT = process.env.PORT || 3000;
 const routes = require("./controllers");
 const SequelizeStore = require("connect-session-sequelize")(session.Store);
 const { Sequelize } = require('sequelize');
-require('dotenv').config();
-
-
-const sequelize = new Sequelize(process.env.DATABASE_URL || 'mysql://root:Abcdefg1!@localhost:3306/blogsite_db', {
-  dialect: 'mysql',
-});
 
 
 // Middleware
