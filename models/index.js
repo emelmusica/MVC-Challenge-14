@@ -13,10 +13,6 @@ User.init(sequelize, Sequelize);
 Post.init(sequelize, Sequelize);
 Comment.init(sequelize, Sequelize);
 
-Category.hasMany(User);
-User.belongsTo(Category);
-
-
 Post.belongsTo(User); // Each post belongs to a user
 User.hasMany(Post);   // Each user can have multiple posts
 
