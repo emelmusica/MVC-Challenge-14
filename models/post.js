@@ -1,3 +1,6 @@
+const { Model, DataTypes } = require("sequelize");
+const bcrypt = require("bcrypt");
+const sequelize = require("../config/connection");
 const express = require('express');
 const router = express.Router(); // Create an Express router instance
 
