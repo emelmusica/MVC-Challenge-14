@@ -1,14 +1,18 @@
-// const  = require("./");
+const Sequelize = require("sequelize");
 const Category = require("./Category");
 const User = require("./User");
 
-// "".belongsTo(Category, {
-//   foreignKey: "category_id",
-// });
+// Create a Sequelize instance and configure it here
+const sequelize = new Sequelize(process.env.DATABASE_URL, {
+  // Sequelize options
+});
 
-// Category.hasMany("", {
-//   foreignKey: "category_id",
-//   onDelete: "CASCADE",
-// });
+// Define your models and associations here
+Category.init(sequelize, Sequelize);
+User.init(sequelize, Sequelize);
 
-module.exports = { Category, User };
+// Define associations (if needed) here
+Category.hasMany(User);
+User.belongsTo(Category);
+
+module.exports = { sequelize, Category, User };
